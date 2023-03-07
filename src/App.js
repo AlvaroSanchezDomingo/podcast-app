@@ -1,11 +1,15 @@
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from 'react-router-dom';
+import MainView from './pages/mainView';
+import PodcastPage from './pages/podcastPage';
 
 function App() {
   return (
-    <div className="App">
-      <Button>Alvaro</Button>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainView />} />
+      <Route path="/podcast" element={<PodcastPage />} />
+      <Route path="*" element={<MainView />} />
+    </Routes>
   );
 }
 
