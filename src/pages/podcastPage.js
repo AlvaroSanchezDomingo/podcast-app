@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-const PodcastPage = (props) => {
-  return <Link to="/">Home</Link>;
+const PodcastPage = () => {
+  const { id } = useParams();
+  return <Link to="/">Home {id}</Link>;
 };
 
 export default PodcastPage;
